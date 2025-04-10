@@ -583,3 +583,22 @@ NULL
 #' }
 #' @source \url{https://www.gov.wales/national-survey-wales-results-viewer}
 "places_gp_appointments"
+
+##' Percentage of People Experiencing Unemployment (2023-24)
+#'
+#' A dataset containing statistics on the percentage of people experiencing
+#' unemployment, excluding students.
+#'
+#' @format A data frame with 22 rows and 3 variables:
+#' \describe{
+#' \item{ltla225_code}{Local Authority Code}
+#' \item{unemployment_percentage}{Percentage of people experiencing unemployment
+#' excluding students. Ages 16-64.}
+#' \item{year}{September 2023 to September 2024}
+#'
+#' ...
+#' }
+#' @source \url{https://statswales.gov.wales/Catalogue/Business-Economy-and-Labour-Market/People-and-Work/Economic-Inactivity/economicinactivityratesexcludingstudents-by-welshlocalarea-year}
+#'
+"places_unemployment"
+
