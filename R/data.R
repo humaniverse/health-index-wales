@@ -1,47 +1,6 @@
 #' @importFrom tibble tibble
 NULL
 
-#' Alcohol Death Rates 2020-2022
-#'
-#' Dataset containing information about death rate from alcohol misuse in Wales
-#'
-#' @format A data frame with 22 rows and 3 variables:
-#' \describe{
-#'   \item{ltla21_code}{Area code}
-#'   \item{Alcohol death rate per 100,000}{Age standardised alcohol-specific death rate per 100,000}
-#'   \item{Year}{Time frame}
-#' .  ...
-#' }
-#' @source \url{https://www.ons.gov.uk/peoplepopulationandcommunity/healthandsocialcare/causesofdeath/datasets/alcoholspecificdeathsintheukmaindataset}
-"hl_alcohol_misuse"
-
-#' Drug Poisoning Death Rates 2022
-#'
-#' Dataset containing information about drug poisoning death rates in Wales for the year 2022.
-#'
-#' @format A data frame with 22 rows and 3 variables:
-#' \describe{
-#'   \item{ltla21_code}{Area code of the local authority}
-#'   \item{Drug poisoning death rate}{Drug poisoning related deaths per 1,000 people}
-#'   \item{Year}{Year of the data}
-#' }
-#' @source \url{https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/deaths/datasets/drugmisusedeathsbylocalauthority}
-#' @source \url{https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/estimatesofthepopulationforenglandandwales}
-"hl_drug_misuse"
-
-#' Early Years Development Wales 2021-2023
-#'
-#' Dataset containing information about the percentage of students in Wales achieving expected level at foundation phase
-#'
-#' @format A data frame with 22 rows and 3 variables:
-#' \describe{
-#'   \item{ltla21_code}{Area code}
-#'   \item{Percent pupils achieving expected level across four foundation level tested areas}{Percentage of foundation phase students, aged 7, who achieve the expected level, level 5, in all four areas of the foundation phase tests per local authority. The four areas are 1) Personal and social development, well-being and cultural diversity, 2) Language, literacy and communication skills - English, 3) Language, literacy and communication skills - Welsh, 4) Mathematical development}
-#'   \item{Year}{Time frame}
-#' .  ...
-#' }
-#' @source \url{https://statswales.gov.wales/Catalogue/Education-and-Skills/Schools-and-Teachers/Examinations-and-Assessments/Foundation-Phase}
-"hl_early_years_development"
 
 #' Sedentary behaviour Wales 2021-2023
 #'
@@ -96,45 +55,6 @@ NULL
 #' @source \url{https://statswales.gov.wales/Catalogue/National-Survey-for-Wales/Population-Health/Adult-Lifestyles}
 "hl_physical_activity"
 
-#' Primary Pupil Absences Wales 2022/2023
-#'
-#' Dataset containing information about the percentage of absences for primary school students in Wales for the academic year 2022/2023
-#'
-#' @format A data frame with 22 rows and 3 variables:
-#' \describe{
-#'   \item{ltla21_code}{Area code}
-#'   \item{Primary percentage of absences}{Percentage of half day sessions missed for primary school students, aged 5-10, for the full academic year, in Wales}
-#'   \item{Year}{Academic year}
-#' .  ...
-#' }
-#' @source \url{https://www.gov.wales/absenteeism-primary-schools-september-2022-august-2023}
-"hl_primary_pupil_absences"
-
-#' Pupil Literacy Attainment Wales 2022/2023
-#'
-#' Dataset containing information about the literacy point score of GCSE students in Wales
-#' @format A data frame with 22 rows and 3 variables:
-#' \describe{
-#'   \item{ltla21_code}{Area code}
-#'   \item{Literacy Point Score}{Score comparing GCSE literacy ability in Wales. Score is calculated by taking the single best grade for each GCSE student out of GCSE English language, GCSE English Literature, GCSE Welsh language or GCSE Welsh Literature. Each student is assigned a score based on that grade: Grade A* = 58, Grade A = 52, Grade B = 46, Grade C = 40, Grade D = 34, Grade E = 28, Grade F = 22, Grade G = 16, Grade U/X = 0. Or, if using the 1-9 grading system: Grade 9 score = 58, Grade 8 score = 55, Grade 7 score = 52, Grade 6 score = 48, Grade 5 score = 44, Grade 4 score = 40, Grade 3 score = 32, Grade 2 score = 24, Grade 1 score = 16, Grade U Score = 0. The literacy point score is the average of each student's score, calculated for each local authority}
-#'   \item{Year}{Academic year}
-#' .  ...
-#' }
-#' @source \url{https://statswales.gov.wales/Catalogue/Education-and-Skills/Schools-and-Teachers/Examinations-and-Assessments/Key-Stage-4}
-"hl_pupil_attainment_literacy"
-
-#' Pupil Numeracy Attainment Wales 2022/2023
-#'
-#' Dataset containing information about the numeracy point score of GCSE students in Wales
-#' @format A data frame with 22 rows and 3 variables:
-#' \describe{
-#'   \item{ltla21_code}{Area code}
-#'   \item{Numeracy Point Score}{Score comparing GCSE numeracy ability in Wales. Score is calculated by taking the single best grade for each GCSE student out of GCSE Mathematics or GCSE Mathematics – numeracy. Each student is assigned a score based on that grade: Grade A* = 58, Grade A = 52, Grade B = 46, Grade C = 40, Grade D = 34, Grade E = 28, Grade F = 22, Grade G = 16, Grade U/X = 0. Or, if using the 1-9 grading system: Grade 9 score = 58, Grade 8 score = 55, Grade 7 score = 52, Grade 6 score = 48, Grade 5 score = 44, Grade 4 score = 40, Grade 3 score = 32, Grade 2 score = 24, Grade 1 score = 16, Grade U Score = 0. The literacy point score is the average of each student's score, calculated for each local authority}
-#'   \item{Year}{Academic year}
-#' .  ...
-#' }
-#' @source \url{https://statswales.gov.wales/Catalogue/Education-and-Skills/Schools-and-Teachers/Examinations-and-Assessments/Key-Stage-4}
-"hl_pupil_attainment_numeracy"
 
 #' Teenage Pregnancy Wales 2021-2023
 #'
@@ -151,171 +71,6 @@ NULL
 #' @source \url{https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/populationestimatesforukenglandandwalesscotlandandnorthernireland}
 "hl_teenage_pregnancy"
 
-#' Bowel Cancer Screening Attendance Wales 2021-2022
-#'
-#' Dataset containing information about the percentage of adults age 58-74 who attended bowel cancer screenings in Wales
-
-#' @format A data frame with 22 rows and 3 variables:
-#' \describe{
-#'   \item{ltla21_code}{Area code}
-#'   \item{Screening uptake percentage}{Percentage of adults out of those invited to attend bowel cancer screening (aged 58-74) who attended their screening. Participants were deemed to have responded to their invitation if the bowel screening programme received a used test kit within six months following their invitation.}
-#'   \item{Year}{Financial Year}
-#' .  ...
-#' }
-#' @source \url{https://phw.nhs.wales/services-and-teams/screening/bowel-screening/programme-reports/uptake-coverage-by-local-authority-and-health-boards/}
-"hl_cancer_screening_bowel"
-
-#' Breast Cancer Screening Attendance Wales 2021-2022
-#'
-#' Dataset containing information about the percentage of women age 50-70 who attended breast cancer screenings
-#' @format A data frame with 22 rows and 3 variables:
-#' \describe{
-#'   \item{ltla21_code}{Area code}
-#'   \item{Screening uptake percentage}{Percentage of adults out of those invited to attend breast cancer screening (aged 50-70) who attended their screening. Women were counted as having responded to their invitation if they attended for screening within six months of original invitation.}
-#'   \item{Year}{Time frame for last recorded Breast Cancer screening, May 2021}
-#' .  ...
-#' }
-#' @source \url{https://phw.nhs.wales/services-and-teams/screening/breast-screening/programme-reports/uptake-coverage-by-local-authority-and-health-boards/}
-"hl_cancer_screening_breast"
-
-#' Cervical Cancer Screening Attendance Wales 2021-2022
-#'
-#' Dataset containing information about the percentage of women age 25-64 who attended cervical cancer screenings
-#' @format A data frame with 22 rows and 3 variables:
-#' \describe{
-#'   \item{ltla21_code}{Area code}
-#'   \item{Screening uptake percentage}{Percentage of adults out of those invited to attend cervical cancer screening (aged 25-64) who attended their screening. Women were counted as having responded if they are aged 25-49 years who have received an adequate test in the last 3.5 years and if they are aged 50-64 years who received an adequate test in the last 5.5 years.}
-#'   \item{Year}{Financial Year}
-#' .  ...
-#' }
-#' @source \url{https://phw.nhs.wales/services-and-teams/cervical-screening-wales/information-resources/programme-reports/uptake-coverage-by-local-authority-and-health-boards/}
-"hl_cancer_screening_cervical"
-
-#' Diphtheria vaccination coverage Wales 2021-2023
-#'
-#' Dataset containing information about the percentage of children in Wales immunized against diphtheria by their second birthday
-#'
-#' @format A data frame with 22 rows and 3 variables:
-#' \describe{
-#'   \item{ltla21_code}{Area code}
-#'   \item{Diphtheria percentage coverage by 2nd birthday}{Percentage of children immunised against diphtheria reaching their second birthday in the year}
-#'   \item{Year}{Time frame}
-#' .  ...
-#' }
-#' @source \url{https://statswales.gov.wales/Catalogue/Health-and-Social-Care/NHS-Primary-and-Community-Activity/Immunisation}
-"hl_diphtheria_vaccination_coverage"
-
-#' Hib vaccination coverage Wales 2021-2023
-#'
-#' Dataset containing information about the percentage of children in Wales immunized against haemophilus influenzae type B by their second birthday
-#'
-#' @format A data frame with 22 rows and 3 variables:
-#' \describe{
-#'   \item{ltla21_code}{Area code}
-#'   \item{Hib percentage coverage by 2nd birthday}{Percentage of children immunised against haemophilus influenzae type B reaching their second birthday in the year}
-#'   \item{Year}{Time frame}
-#' .  ...
-#' }
-#' @source \url{https://statswales.gov.wales/Catalogue/Health-and-Social-Care/NHS-Primary-and-Community-Activity/Immunisation}
-"hl_hib_vaccination_coverage"
-
-#' Tetanus vaccination coverage Wales 2021-2023
-#'
-#' Dataset containing information about the percentage of children in Wales immunized against tetanus by their second birthday
-#'
-#' @format A data frame with 22 rows and 3 variables:
-#' \describe{
-#'   \item{ltla21_code}{Area code}
-#'   \item{Tetanus percentage coverage by 2nd birthday}{Percentage of children immunised against tetanus reaching their second birthday in the year}
-#'   \item{Year}{Time frame}
-#' .  ...
-#' }
-#' @source \url{https://statswales.gov.wales/Catalogue/Health-and-Social-Care/NHS-Primary-and-Community-Activity/Immunisation}
-"hl_tetanus_vaccination_coverage"
-
-#' Whooping cough vaccination coverage Wales 2021-2023
-#'
-#' Dataset containing information about the percentage of children in Wales immunized against whooping cough by their second birthday
-#'
-#' @format A data frame with 22 rows and 3 variables:
-#' \describe{
-#'   \item{ltla21_code}{Area code}
-#'   \item{Whooping cough percentage coverage by 2nd birthday}{Percentage of children immunised against whooping cough reaching their second birthday in the year}
-#'   \item{Year}{Time frame}
-#' .  ...
-#' }
-#' @source \url{https://statswales.gov.wales/Catalogue/Health-and-Social-Care/NHS-Primary-and-Community-Activity/Immunisation}
-"hl_whooping_cough_vaccination_coverage"
-
-#' Polio vaccination coverage Wales 2021-2023
-#'
-#' Dataset containing information about the percentage of children in Wales immunized against polio by their second birthday
-#'
-#' @format A data frame with 22 rows and 3 variables:
-#' \describe{
-#'   \item{ltla21_code}{Area code}
-#'   \item{Polio percentage coverage by 2nd birthday}{Percentage of children immunised against polio reaching their second birthday in the year}
-#'   \item{Year}{Time frame}
-#' .  ...
-#' }
-#' @source \url{https://statswales.gov.wales/Catalogue/Health-and-Social-Care/NHS-Primary-and-Community-Activity/Immunisation}
-"hl_polio_vaccination_coverage"
-
-#' MMR vaccination coverage Wales 2021-2023
-#'
-#' Dataset containing information about the percentage of children in Wales immunized against Measles, Mumps and Rubella (MMR) by their second birthday
-#'
-#' @format A data frame with 22 rows and 3 variables:
-#' \describe{
-#'   \item{ltla21_code}{Area code}
-#'   \item{MMR percentage coverage by 2nd birthday}{Percentage of children immunised against Measles, Mumps and Rubella (MMR) reaching their second birthday in the year}
-#'   \item{Year}{Time frame}
-#' .  ...
-#' }
-#' @source \url{https://statswales.gov.wales/Catalogue/Health-and-Social-Care/NHS-Primary-and-Community-Activity/Immunisation}
-"hl_mmr_vaccination_coverage"
-
-#' Pneumococcal vaccination coverage Wales 2021-2023
-#'
-#' Dataset containing information about the percentage of children in Wales immunized against pneumococcal disease by their second birthday
-#'
-#' @format A data frame with 22 rows and 3 variables:
-#' \describe{
-#'   \item{ltla21_code}{Area code}
-#'   \item{Pneumococcal percentage coverage by 2nd birthday}{Percentage of children immunised against pneumococcal disease reaching their second birthday in the year}
-#'   \item{Year}{Time frame}
-#' .  ...
-#' }
-#' @source \url{https://statswales.gov.wales/Catalogue/Health-and-Social-Care/NHS-Primary-and-Community-Activity/Immunisation}
-"hl_pneumococcal_vaccination_coverage"
-
-#' Meningitis B vaccination coverage Wales 2021-2023
-#'
-#' Dataset containing information about the percentage of children in Wales immunized against meningitis B by their second birthday
-#'
-#' @format A data frame with 22 rows and 3 variables:
-#' \describe{
-#'   \item{ltla21_code}{Area code}
-#'   \item{Meningitis B percentage coverage by 2nd birthday}{Percentage of children immunised against meningitis B reaching their second birthday in the year}
-#'   \item{Year}{Time frame}
-#' .  ...
-#' }
-#' @source \url{https://statswales.gov.wales/Catalogue/Health-and-Social-Care/NHS-Primary-and-Community-Activity/Immunisation}
-"hl_meningitisb_vaccination_coverage"
-
-#' Greenspace Provision in Wales 2024
-#'
-#' Dataset containing information about greenspace provision in Wales
-#'
-#' @format A data frame with 22 rows and 3 variables:
-#' \describe{
-#'   \item{ltla21_code}{Area code}
-#'   \item{ltla21_name}{Area name}
-#'   \item{provision_per_person}{The amount of public greenspace available per person, SQM}
-#' .  ...
-#' }
-#' @source \url{https://fieldsintrust.org/insights/green-space-index}
-"hp_greenspace_access"
 
 #' Low-Level Crime Scores for Wales
 #'
@@ -363,19 +118,6 @@ NULL
 #' @source \url{https://www.ons.gov.uk/} and \url{https://opendata.arcgis.com/}
 "hp_personal_crime"
 
-#' Young people in education, employment and apprenticeships Wales 2009/2010
-#'
-#' Dataset containing information about the standard participation rate in sustained education, employment or an apprenticeship for 16-24 year olds after key stage 4
-#'
-#' @format A data frame with 22 rows and 3 variables:
-#' \describe{
-#'   \item{ltla21_code}{Area code}
-#'   \item{Participation rate under 20}{Participation rate in post-16 (after Key Stage 4) Education and Training in Wales for under 20 year olds. Participation rate is calculated using census data population count by local authority, with participation measured against the Welsh national average of 100. Participation rates above 100 reflect high participation rates, below 100 low participation rates}
-#'   \item{Year}{Academic year}
-#' .  ...
-#' }
-#' @source \url{https://statswales.gov.wales/Catalogue/Education-and-Skills/Post-16-Education-and-Training/Further-Education-and-Work-Based-Learning/Standardised-Participation-Rates}
-"hl_education_employment_apprenticeship"
 
 #' Low Birth Weight Percentage by year Wales
 #'
@@ -390,18 +132,6 @@ NULL
 #' @source \url{https://statswales.gov.wales/Catalogue/National-Survey-for-Wales/Population-Health/Adult-Lifestyles}
 "hl_low_birth_weight"
 
-#' Percentage of Overweight and Obese Adults (aged 16+) in Wales
-#'
-#' Dataset containing information about the percentage of overweight and obese adults in Wales aged 16+
-#' @format A data frame with 22 rows and 3 variables:
-#' \describe{
-#'   \item{ltla21_code}{Area code}
-#'   \item{percentage_overweight_obese}{The percentage of overweight and obese adults in each local authority of Wales}
-#'   \item{Year}{Time frame}
-#' .  ...
-#' }
-#' @source \url{https://statswales.gov.wales/Catalogue/National-Survey-for-Wales/Population-Health/Adult-Lifestyles}
-"hl_adult_overweight_obese"
 
 #' Percentage of Overweight and Obese Children (aged 4-5) in Wales
 #'
