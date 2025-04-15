@@ -180,6 +180,25 @@ NULL
 #'
 "places_pharmacy_travel_time"
 
+
+#' Road safety (2023)
+#'
+#' A dataset containing number of people killed or injured in each Welsh Council 
+#' Area in 2023 (latest revised and checked data available).
+#'
+#' @format A data frame with 22 rows and 3 variables:
+#' \describe{
+#' \item{ltla25_code}{Local Authority Code}
+#' \item{road_accident_count}{Number of people killed or injured, per Local 
+#' Authority}
+#' \item{year}{Year}
+#'
+#' ...
+#' }
+#' @source \url{https://statswales.gov.wales/Catalogue/Transport/Roads/Road-Accidents/Casualties/numberofcasualties-by-quarter-year-localauthority-policeforce}
+"places_road_safety"
+
+
 #' Travel time to sports facilities (2025)
 #'
 #' A dataset containing the average (mean) travel time (in minutes) to the nearest
