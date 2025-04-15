@@ -119,24 +119,27 @@ NULL
 #' @source \url{https://www.gov.uk/government/statistics/children-in-low-income-families-local-area-statistics-2014-to-2022}
 "hp_child_poverty"
 
-#' Percentage of Households Experiencing Overcrowding in Wales (2021 Census)
+
+#' Percentage Household Overcrowding (2021)
 #'
-#' A dataset containing statistics on the percentage of households in each LA that are experiencing overcrowding, 2021.
-#'
-#' Overcrowding is defined as households with an occupancy rating of -1 or less,
-#' which implies that a household has at least one fewer bedroom than required.
+#' A dataset containing statistics on the percentage of households experiencing
+#' household overcrowding, per Council (2021).
+#' Household overcrowding is  defined as households with an occupancy rating of 
+#' -1 or lower.
 #'
 #' @format A data frame with 22 rows and 3 variables:
 #' \describe{
-#' \item{ltla21_code}{Local Authority Code}
-#' \item{percentage_households_overcrowding}{Percentage of households assessed
-#' as overcrowded at the time of the 2021 Census, per Local Authroity}
-#' \item{year}{Date}
+#' \item{ltla25_code}{Local Authority Code}
+#' \item{percentage_households_overcrowding}{Percentage of households
+#' experiencing household overcrowding}
+#' \item{year}{Year}
 #'
 #' ...
 #' }
-#' @source \url{https://www.ons.gov.uk/file?uri=/peoplepopulationandcommunity/housing/datasets/overcrowdingandunderoccupancybyhouseholdcharacteristicsenglandandwalescensus2021/census2021/hou04dataset.xlsx}
-"hp_household_overcrowding"
+#' @source \url{https://www.ons.gov.uk/peoplepopulationandcommunity/housing/datasets/overcrowdingandunderoccupancybyhouseholdcharacteristicsenglandandwalescensus2021}
+"places_household_overcrowding"
+
+
 
 #' Travel time to GPs (2025)
 #'
