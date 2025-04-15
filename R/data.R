@@ -138,6 +138,24 @@ NULL
 #' @source \url{https://www.ons.gov.uk/file?uri=/peoplepopulationandcommunity/housing/datasets/overcrowdingandunderoccupancybyhouseholdcharacteristicsenglandandwalescensus2021/census2021/hou04dataset.xlsx}
 "hp_household_overcrowding"
 
+
+#' Air pollution (2019)
+#'
+#' A dataset containing population-weighted annual mean PM2.5 data for 2019, by
+#' Welsh Council Area. Uses the anthropogenic component.
+#'
+#' @format A data frame with 22 rows and 3 variables:
+#' \describe{
+#' \item{ltla25_code}{Local Authority Code}
+#' \item{air_pollution_weighted}{Population-weighted annual mean PM2.5}
+#' \item{year}{Year}
+#'
+#' ...
+#' }
+#' @source \url{https://uk-air.defra.gov.uk/data/pcm-data}
+"places_air_pollution"
+
+
 #' Travel time to GPs (2025)
 #'
 #' A dataset containing the average (median) travel time (in minutes) to the nearest
