@@ -19,6 +19,30 @@ NULL
 "people_anxiety"
 
 
+#' Percentage Rate of Cancer (2024)
+#'
+#' A dataset containing statistics on the percentage of people who self-reported
+#' as having Cancer in Welsh Council Areas.
+#' 
+#' To note: StatsWales Disease Prevalence data only captures disease prevalence 
+#' in a 'snapshot', or a single point of time. This means the year data 
+#' represents when the data was extracted, not the period covered.
+#'
+#' @format A data frame with 22 rows and 3 variables:
+#' \describe{
+#' \item{ltla25_code}{Local Authroity Code}
+#' \item{cancer_percentage}{Percentage of people who 
+#' self-reported as having Cancer}
+#' \item{year}{Snapshot of a single point in time in 2024 - specifically 1
+#' April 2024}
+#'
+#' ...
+#' }
+#' @source \url{https://statswales.gov.wales/Catalogue/Health-and-Social-Care/NHS-Primary-and-Community-Activity/GMS-Contract/diseaseregisters-by-localhealthboard}
+#'
+"people_cancer"
+
+
 #' Average Measurement of Happiness Out of 10 (2022-23)
 #'
 #' A dataset containing statistics of personal ratings on feelings of
