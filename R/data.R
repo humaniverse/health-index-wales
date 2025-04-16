@@ -77,7 +77,9 @@ NULL
 #' @format A data frame with 22 rows and 3 variables:
 #' \describe{
 #'   \item{ltla21_code}{Area code}
-#'   \item{Percent adults active less than 30 minutes last week}{Percentage of people aged 16 and over in each local authority claiming to have exercised for less than 30 minutes the previous week, age standardised}
+#'   \item{Percent adults active less than 30 minutes last week}{Percentage of 
+#'   people aged 16 and over in each local authority claiming to have exercised 
+#'   for less than 30 minutes the previous week, age standardised}
 #'   \item{Year}{Time frame}
 #' .  ...
 #' }
@@ -101,23 +103,27 @@ NULL
 "hl_teenage_pregnancy"
 
 
-#' Percentage of children (Under 16) in Absolute Poverty in Wales (2022)
+#' Percentage of Absolute Child Poverty (2022)
 #'
-#' A dataset containing statistics on the percentage of children under 16 experiencing
-#' absolute poverty, by Local Authority, 2022.
+#' A dataset containing statistics on the percentage of children under 16 
+#' experiencing absolute poverty, living in absolute low income families, by 
+#' Local Authority, 2022.
 #'
-#' Absolute poverty refers to people living in households with income below 60% of median income in a base year, usually 2010/11.
+#' Absolute poverty refers to people living in households with income below 60% 
+#' of median income in a base year, usually 2010/11.
 #'
 #' @format A data frame with 22 rows and 3 variables:
 #' \describe{
-#' \item{ltla21_code}{Local Authority Code}
-#' \item{percentage_children_absolute_poverty}{Annual percentage of children (under 16) assessed as living in absolute poverty in 2022}
+#' \item{ltla25_code}{Local Authority Code}
+#' \item{child_poverty_percentage}{Percentage of children (aged 16 and under) 
+#' living in absolute low income families}
 #' \item{year}{Date}
 #'
 #' ...
 #' }
 #' @source \url{https://www.gov.uk/government/statistics/children-in-low-income-families-local-area-statistics-2014-to-2022}
-"hp_child_poverty"
+"places_child_poverty"
+
 
 #' Percentage of Households Experiencing Overcrowding in Wales (2021 Census)
 #'
