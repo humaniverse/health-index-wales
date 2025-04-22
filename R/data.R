@@ -1,6 +1,25 @@
 #' @importFrom tibble tibble
 NULL
 
+#' Rates of teenage pregnancies per 1,000 (2021)
+#'
+#' A dataset containing statistics on the rate of teenage pregnancies (under 18) 
+#' per 1k.
+
+#' @format A data frame with 22 rows and 3 variables:
+#' \describe{
+#' \item{ltla25_code}{Local Authority Code}
+#' \item{teenage_pregnancies_per_1k}{Rate of teenage pregnancies per 1k where
+#' teenagers are aged between 13 and 18}
+#' \item{year}{Year}
+#'
+#' ...
+#' }
+#' @source \url{https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/conceptionandfertilityrates/datasets/conceptionstatisticsenglandandwalesreferencetables}
+#'
+"lives_teenage_pregnancy"
+
+
 #' Mortality all causes rate per 100k (2023)
 #'
 #' A dataset containing statistics from an age-sex standardised rate for all
