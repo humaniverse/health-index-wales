@@ -127,6 +127,28 @@ NULL
 "people_diabetes"
 
 
+#' Percentage of People Aged 15-64 with Long-Term Health Problem/Disability
+#' that Limits Daily Activities
+#'
+#' A dataset containing statistics on the percentage of people aged 15-64 with
+#' long-term health problem/disability that limits daily activities, by Council
+#' (2021).
+#'
+#' @format A data frame with 22 rows and 3 variables:
+#' \describe{
+#' \item{ltla25_code}{Local Authority Code}
+#' \item{disability_activities_limited_percentage}{percentage of people aged 15-64
+#' with long-term health problem/disability that limits daily activities by a
+#' lot or by a little.}
+#' \item{year}{Year}
+#'
+#' ...
+#' }
+#' @source \url{https://www.ons.gov.uk/peoplepopulationandcommunity/healthandsocialcare/healthandwellbeing/bulletins/disabilityenglandandwales/census2021#:~:text=In%20Wales%2C%20in%202021%2C%20a,(21.2%25%2C%20567%2C000).}
+#'
+"people_disability_daily_activities"
+
+
 #' Average Measurement of Happiness Out of 10 (2022-23)
 #'
 #' A dataset containing statistics of personal ratings on feelings of
