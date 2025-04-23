@@ -1,6 +1,27 @@
 #' @importFrom tibble tibble
 NULL
 
+#' Percentage Rate of Cardiovascular Conditions (CHD, Atrial Fibrillation,
+#' Heart Failure, Stroke & TIA) (2024)
+#'
+#' A dataset containing statistics on the percentage of people who self-reported
+#' as having CHD, Atrial Fibrillation, Heart Failure, and/or Stroke & TIA in
+#' Welsh Council Areas.
+#'
+#' @format A data frame with 22 rows and 3 variables:
+#' \describe{
+#' \item{ltla25_code}{Local Authroity Code}
+#' \item{cardiovascular_conditions_percentage}{Percentage of people who self-reported
+#' as having CHD, Atrial Fibrillation, Heart Failure, and/or Stroke & TIA}
+#' \item{year}{Year}
+#'
+#' ...
+#' }
+#' @source \url{https://statswales.gov.wales/Catalogue/Health-and-Social-Care/NHS-Primary-and-Community-Activity/GMS-Contract/diseaseregisters-by-localhealthboard}
+#'
+"lives_cardiovascular_conditions"
+
+
 #' Mortality all causes rate per 100k (2023)
 #'
 #' A dataset containing statistics from an age-sex standardised rate for all
