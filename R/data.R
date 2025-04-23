@@ -1,6 +1,24 @@
 #' @importFrom tibble tibble
 NULL
 
+#' Percentage of Adults Diagnosed with High Blood Pressure (2024)
+#'
+#' A dataset containing statistics on percentage of adults diagnosed with high
+#' blood pressure, by Council (2024).
+#'
+#' @format A data frame with 22 rows and 3 variables:
+#' \describe{
+#' \item{ltla25_code}{Local Authority Code}
+#' \item{high_blood_pressure_percentage}{Percentage of adults diagnosed with
+#' high blood pressure}
+#' \item{year}{Year}
+#'
+#' ...
+#' }
+#' @source \url{https://statswales.gov.wales/Catalogue/Health-and-Social-Care/NHS-Primary-and-Community-Activity/GMS-Contract/diseaseregisters-by-localhealthboard}
+"lives_high_blood_pressure"
+
+
 #' Mortality all causes rate per 100k (2023)
 #'
 #' A dataset containing statistics from an age-sex standardised rate for all
