@@ -1,6 +1,29 @@
 #' @importFrom tibble tibble
 NULL
 
+#' Average percentage of Adults Obese (2024)
+#'
+#' A dataset containing statistics on the average percentage of adults (aged 
+#' 16+) clinically classed as obese in each Council, 2024.
+#' 
+#' To note: England's Health Index captures data on overweight and obese adults
+#' aged 16+. However, Wales only captures adults classed as obese. This has been
+#' included as the closest proxy.
+#'
+#' @format A data frame with 22 rows and 3 variables:
+#' \describe{
+#' \item{ltla25_code}{Local Authority Code}
+#' \item{obesity_adults_percentage}{Average percentage of adults 
+#' (aged 16+) clinically classed as overweight and obese}
+#' \item{year}{School Year}
+#'
+#' ...
+#' }
+#' @source \url{https://statswales.gov.wales/Catalogue/Health-and-Social-Care/NHS-Primary-and-Community-Activity/GMS-Contract/diseaseregisters-by-localhealthboard}
+#'
+"lives_obesity_adults"
+
+
 #' Mortality all causes rate per 100k (2023)
 #'
 #' A dataset containing statistics from an age-sex standardised rate for all
