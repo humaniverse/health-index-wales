@@ -1,6 +1,27 @@
 #' @importFrom tibble tibble
 NULL
 
+#' Percentage of Childhood Vaccine Coverage (2023-2024)
+#'
+#' A dataset containing statistics on childhood vaccine coverage (aged 4 and
+#' under) in each Welsh Council, 2023/24.
+#'
+#' @format A data frame with 22 rows and 3 variables:
+#' \describe{
+#' \item{ltla25_code}{Local Authority Code}
+#' \item{child_vaccination_coverage_percentage}{Percentage of vaccine coverage. 
+#' Includes the following immunisations: Diphtheria, Tetanus, Pertussis, Polio, 
+#' Haemophilus influenzae (Hib), Measles, Mumps, Rubella, Meningitis C and 
+#' Pneumococcal infection (PCV).}
+#' \item{year}{School Year}
+#'
+#' ...
+#' }
+#' @source \url{https://statswales.gov.wales/Catalogue/Health-and-Social-Care/NHS-Primary-and-Community-Activity/flying-start/childrenlivinginflyingstartnonflyingstartareaswhoarefullyimmunisedbytheir4thbirthday-by-localauthority}
+#'
+"lives_child_vaccination_coverage"
+
+
 #' Mortality all causes rate per 100k (2023)
 #'
 #' A dataset containing statistics from an age-sex standardised rate for all
