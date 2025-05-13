@@ -310,6 +310,24 @@ NULL
 "people_happiness"
 
 
+#' Average Life Expectancy for Men and Women (2021-2023)
+#'
+#' A dataset containing statistics on average life expectancy for men
+#' and women, by Welsh Council (2021-2023).
+#'
+#' @format A data frame with 22 rows and 3 variables:
+#' \describe{
+#' \item{ltla24_code}{Local Authority Code}
+#' \item{life_expectancy_combined}{Average life expectancy for men and women}
+#' \item{year}{Time period - three year aggregate}
+#'
+#' ...
+#' }
+#' @source \url{https://www.ons.gov.uk/peoplepopulationandcommunity/healthandsocialcare/healthandlifeexpectancies/datasets/lifeexpectancyforlocalareasofgreatbritain}
+"people_life_expectancy"
+
+
+
 #' Average Measurement of Life Satisfaction Out of 10 (2022-23)
 #'
 #' A dataset containing statistics of personal ratings on feelings of
