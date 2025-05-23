@@ -13,6 +13,9 @@ Includes the following immunisations: Diphtheria, Tetanus, Pertussis, Polio,
 Haemophilus influenzae (Hib), Measles, Mumps, Rubella, Meningitis C and
 Pneumococcal infection (PCV).}
 \item{year}{School Year}
+\item{domain}{Indicator domain - lives, people, or places}
+\item{subdomain}{Indicator subdomain}
+\item{is_higher_better}{Does higher scores correspond to better outcomes}
 
 ...
 }

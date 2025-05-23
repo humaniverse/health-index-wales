@@ -11,6 +11,9 @@ A data frame with 22 rows and 3 variables:
 \item{activity_levels_met_percentage}{Percentage of people that meet the
 recommended activity levels of at least 150 minutes a week}
 \item{year}{Time periods over a 2 year period}
+\item{domain}{Indicator domain - lives, people, or places}
+\item{subdomain}{Indicator subdomain}
+\item{is_higher_better}{Does higher scores correspond to better outcomes}
 
 ...
 }

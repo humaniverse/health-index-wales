@@ -10,6 +10,9 @@ A data frame with 22 rows and 3 variables:
 \item{ltla24_code}{Local Authority Code}
 \item{life_expectancy_combined}{Average life expectancy for men and women}
 \item{year}{Time period - three year aggregate}
+\item{domain}{Indicator domain - lives, people, or places}
+\item{subdomain}{Indicator subdomain}
+\item{is_higher_better}{Does higher scores correspond to better outcomes}
 
 ...
 }

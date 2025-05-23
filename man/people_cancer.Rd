@@ -12,6 +12,9 @@ A data frame with 22 rows and 3 variables:
 self-reported as having Cancer}
 \item{year}{Snapshot of a single point in time in 2024 - specifically 1
 April 2024}
+\item{domain}{Indicator domain - lives, people, or places}
+\item{subdomain}{Indicator subdomain}
+\item{is_higher_better}{Does higher scores correspond to better outcomes}
 
 ...
 }

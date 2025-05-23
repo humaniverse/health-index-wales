@@ -11,6 +11,9 @@ A data frame with 22 rows and 3 variables:
 \item{teenage_pregnancies_per_1k}{Rate of teenage pregnancies per 1k where
 teenagers are aged between 13 and 18}
 \item{year}{Year}
+\item{domain}{Indicator domain - lives, people, or places}
+\item{subdomain}{Indicator subdomain}
+\item{is_higher_better}{Does higher scores correspond to better outcomes}
 
 ...
 }

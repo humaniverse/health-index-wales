@@ -11,6 +11,9 @@ A data frame with 22 rows and 3 variables:
 \item{low_level_crime_rate_per_1k}{Average rate of low-level-crime (bicycle
 theft and shoplifting)}
 \item{year}{September 2023 - September 2024}
+\item{domain}{Indicator domain - lives, people, or places}
+\item{subdomain}{Indicator subdomain}
+\item{is_higher_better}{Does higher scores correspond to better outcomes}
 ...
 }
 }

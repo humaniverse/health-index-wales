@@ -5,7 +5,7 @@
 \alias{places_gp_appointments}
 \title{Ease of getting GP appointments at a convenient time (2021-22)}
 \format{
-An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 21 rows and 3 columns.
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 20 rows and 6 columns.
 }
 \source{
 \url{https://www.gov.wales/national-survey-wales-results-viewer}
@@ -29,6 +29,9 @@ Local Authority within the Health Boards.
 \item{gp_appointments_very_difficult}{Percentage of people reporting it was
 very difficult to get a GP appointment at a convenient time}
 \item{year}{Year the survey was conducted}
+\item{domain}{Indicator domain - lives, people, or places}
+\item{subdomain}{Indicator subdomain}
+\item{is_higher_better}{Does higher scores correspond to better outcomes}
 ...
 }
 }

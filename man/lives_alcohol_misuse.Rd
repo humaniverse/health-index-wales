@@ -11,6 +11,9 @@ A data frame with 22 rows and 3 variables:
 \item{alcohol_admissions_rate_per_100k}{Rate of patient admissions per 100k
 population, based on population numbers per Local Authority}
 \item{year}{Time period}
+\item{domain}{Indicator domain - lives, people, or places}
+\item{subdomain}{Indicator subdomain}
+\item{is_higher_better}{Does higher scores correspond to better outcomes}
 
 ...
 }

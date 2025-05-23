@@ -11,6 +11,9 @@ A data frame with 22 rows and 3 variables:
 \item{child_poverty_percentage}{Percentage of children (aged 16 and under)
 living in absolute low income families}
 \item{year}{Date}
+\item{domain}{Indicator domain - lives, people, or places}
+\item{subdomain}{Indicator subdomain}
+\item{is_higher_better}{Does higher scores correspond to better outcomes}
 
 ...
 }

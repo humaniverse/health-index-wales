@@ -11,6 +11,9 @@ A data frame with 22 rows and 3 variables:
 \item{percentage_households_overcrowding}{Percentage of households
 experiencing household overcrowding}
 \item{year}{Year}
+\item{domain}{Indicator domain - lives, people, or places}
+\item{subdomain}{Indicator subdomain}
+\item{is_higher_better}{Does higher scores correspond to better outcomes}
 
 ...
 }

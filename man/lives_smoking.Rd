@@ -10,6 +10,9 @@ A data frame with 22 rows and 3 variables:
 \item{ltla24_code}{Local Authority Code}
 \item{smoking_percentage}{Percentage of people that are current smokers}
 \item{year}{Time periods over a 2 year period}
+\item{domain}{Indicator domain - lives, people, or places}
+\item{subdomain}{Indicator subdomain}
+\item{is_higher_better}{Does higher scores correspond to better outcomes}
 
 ...
 }

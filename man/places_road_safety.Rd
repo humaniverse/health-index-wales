@@ -11,6 +11,9 @@ A data frame with 22 rows and 3 variables:
 \item{road_accident_count}{Number of people killed or injured, per Local
 Authority}
 \item{year}{Year}
+\item{domain}{Indicator domain - lives, people, or places}
+\item{subdomain}{Indicator subdomain}
+\item{is_higher_better}{Does higher scores correspond to better outcomes}
 
 ...
 }

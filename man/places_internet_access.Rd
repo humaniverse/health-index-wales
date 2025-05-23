@@ -11,6 +11,9 @@ A data frame with 22 rows and 3 variables:
 \item{poor_internet_access_percentage}{\% of premises below the Universal
 Service Obligation (USO) for broadband}
 \item{year}{Year the data was last updated}
+\item{domain}{Indicator domain - lives, people, or places}
+\item{subdomain}{Indicator subdomain}
+\item{is_higher_better}{Does higher scores correspond to better outcomes}
 ...
 }
 }

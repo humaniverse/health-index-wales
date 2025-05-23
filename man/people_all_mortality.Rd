@@ -11,6 +11,9 @@ A data frame with 22 rows and 3 variables:
 \item{all_deaths_per_100k}{age-sex standardised rate for all causes of
 mortality per 100k}
 \item{year}{Year}
+\item{domain}{Indicator domain - lives, people, or places}
+\item{subdomain}{Indicator subdomain}
+\item{is_higher_better}{Does higher scores correspond to better outcomes}
 ...
 }
 }

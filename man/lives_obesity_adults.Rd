@@ -11,6 +11,9 @@ A data frame with 22 rows and 3 variables:
 \item{obesity_adults_percentage}{Average percentage of adults
 (aged 16+) clinically classed as overweight and obese}
 \item{year}{Year}
+\item{domain}{Indicator domain - lives, people, or places}
+\item{subdomain}{Indicator subdomain}
+\item{is_higher_better}{Does higher scores correspond to better outcomes}
 
 ...
 }

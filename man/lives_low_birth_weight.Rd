@@ -11,6 +11,9 @@ A data frame with 22 rows and 3 variables:
 \item{low_birth_weight_percentage}{Percentage of babies born not at a healthy
 birth weight (<2,500g)}
 \item{year}{Year}
+\item{domain}{Indicator domain - lives, people, or places}
+\item{subdomain}{Indicator subdomain}
+\item{is_higher_better}{Does higher scores correspond to better outcomes}
 
 ...
 }

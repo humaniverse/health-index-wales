@@ -11,6 +11,9 @@ A data frame with 22 rows and 3 variables:
 \item{unemployment_percentage}{Percentage of people experiencing unemployment
 excluding students. Ages 16-64.}
 \item{year}{September 2023 to September 2024}
+\item{domain}{Indicator domain - lives, people, or places}
+\item{subdomain}{Indicator subdomain}
+\item{is_higher_better}{Does higher scores correspond to better outcomes}
 
 ...
 }
