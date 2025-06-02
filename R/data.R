@@ -371,6 +371,27 @@ NULL
 "lives_drug_misuse"
 
 
+#' Sexual health Rates per 100k (2023)
+#'
+#' A dataset containing statistics on total average rates of chlamydia,
+#' gonorrhoea, syphilis, and testing rates per 100k in each Welsh Council, 2023.
+#' Note, data were only available at the Health Board level, so all council
+#' areas within a given health board share the same statistic.
+#'
+#' @format A data frame with 22 rows and 3 variables:
+#' \describe{
+#' \item{ltla24_code}{Local Authority Code}
+#' \item{sexual_health_testing_diagnosis_rate_per_100k}{Total average rate of
+#' chlamydia, gonorrhoea, syphilis, and testing rates per 100,000}
+#' \item{year}{Year}
+#'
+#' ...
+#' }
+#' @source \url{https://phw.nhs.wales/publications/publications1/sexual-health-trends-in-wales-annual-report-2024/}
+#'
+"lives_sexual_health"
+
+
 #' Mortality all causes rate per 100k (2023)
 #'
 #' A dataset containing statistics from an age-sex standardised rate for all
