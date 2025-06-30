@@ -65,8 +65,8 @@ wales_sports_centres_lad <-
   filter(!is.na(ltla21_code)) |>
   mutate(
     # Round coords to 3 decimal points to save memory
-    lat = st_coordinates(geometry)[,2] |> round(3),
-    lng = st_coordinates(geometry)[,1] |> round(3)
+    lat = st_coordinates(geometry)[, 2] |> round(3),
+    lng = st_coordinates(geometry)[, 1] |> round(3)
   ) |>
   st_drop_geometry() |>
   as_tibble() |>
@@ -86,8 +86,8 @@ msoa21_centroids <-
   msoa21_centroids_raw |>
   mutate(
     # Round coords to 3 decimal points to save memory
-    lat = st_coordinates(geometry)[,2] |> round(3),
-    lng = st_coordinates(geometry)[,1] |> round(3)
+    lat = st_coordinates(geometry)[, 2] |> round(3),
+    lng = st_coordinates(geometry)[, 1] |> round(3)
   ) |>
   st_drop_geometry() |>
   select(
@@ -104,36 +104,36 @@ msoa21_centroids <-
 # Set up tibbles to store results
 sports_centre_travel_time <- tibble()
 
-lookup_msoa21_ltla22 <- 
-  geographr::lookup_postcode_oa21_lsoa21_msoa21_ltla22 |> 
+lookup_msoa21_ltla22 <-
+  geographr::lookup_postcode_oa21_lsoa21_msoa21_ltla22 |>
   distinct(msoa21_code, ltla22_code)
 
 # Start loop at row 7; the first six rows are the English LADs
 # We don't need to calculate travel times within them
 for (i in 7:nrow(wales_lad)) {
-  current_ltla_code <- wales_lad[i,]$ltla21_code
-  
+  current_ltla_code <- wales_lad[i, ]$ltla21_code
+
   current_msoa_codes <-
     lookup_msoa21_ltla22 |>
     filter(ltla22_code == current_ltla_code) |>
     distinct(msoa21_code) |>
     pull(msoa21_code)
-  
+
   current_msoa_centroids <-
     msoa21_centroids |>
     filter(msoa21_code %in% current_msoa_codes)
-  
+
   # Get sports_centres in the current LAD and its neighbouring LADs
   current_neighbours <-
-    wales_lad[neighbours[[i]],] |>
+    wales_lad[neighbours[[i]], ] |>
     pull(ltla21_code)
-  
+
   current_sports_centres <-
     wales_sports_centres_lad |>
     filter(ltla21_code %in% c(current_ltla_code, current_neighbours)) |>
     # We'll combine the sports_centres with Intermediate Zones - use the same column name for IDs
     rename(id = osm_id)
-  
+
   # Loop through each Intermediate Zones in the current Local Authority,
   # calculating travel time to the current set of sports_centres
   for (msoa in 1:nrow(current_msoa_centroids)) {
@@ -141,33 +141,36 @@ for (i in 7:nrow(wales_lad)) {
       current_msoa_centroids |>
       slice(msoa) |>
       rename(id = msoa21_code)
-    
+
     # Need to make a list of locations with the `traveltimeR::make_locations()` function
     # First we must collate the current set of locations into a single dataframe
     current_locations_df <- bind_rows(current_msoa_centroid, current_sports_centres)
-    
+
     # Then use the approach shown in Travel Time's R package readme: https://docs.traveltime.com/api/sdks/r
-    current_locations <- apply(current_locations_df, 1, function(x)
-      make_location(id = x['id'], coords = list(lat = as.numeric(x["lat"]),
-                                                lng = as.numeric(x["lng"]))))
+    current_locations <- apply(current_locations_df, 1, function(x) {
+      make_location(id = x["id"], coords = list(
+        lat = as.numeric(x["lat"]),
+        lng = as.numeric(x["lng"])
+      ))
+    })
     current_locations <- unlist(current_locations, recursive = FALSE)
-    
+
     current_search <-
       make_search(
         id = str_glue("search {current_msoa_centroid$id}"), # Make up an ID for the search so each search is unique
         departure_location_id = current_msoa_centroid$id,
         arrival_location_ids = as.list(current_sports_centres$id),
-        travel_time = 10800,  # 3 hours (in seconds)
+        travel_time = 10800, # 3 hours (in seconds)
         properties = list("travel_time"),
         arrival_time_period = "weekday_morning",
         transportation = list(type = "public_transport")
       )
-    
+
     current_result <- time_filter_fast(locations = current_locations, arrival_one_to_many = current_search)
-    
+
     # Convert JSON result to a data frame
     current_result_df <- fromJSON(current_result$contentJSON, flatten = TRUE)
-    
+
     # Some MSOAs can't reach any sports_centres - ignore them
     if (length(current_result_df$results$locations[[1]]) > 0) {
       current_travel_time <-
@@ -179,28 +182,50 @@ for (i in 7:nrow(wales_lad)) {
           msoa21_code = current_msoa_centroid$id
         ) |>
         select(msoa21_code, osm_id = id, travel_time_mins)
-      
+
       sports_centre_travel_time <- bind_rows(sports_centre_travel_time, current_travel_time)
     }
-    
+
     print(str_glue("Finished MSOA {msoa} of {nrow(current_msoa_centroids)}"))
     Sys.sleep(2)
   }
-  
+
   # Save progress to disc after each LAD
   # NOTE: Please manually delete these files once the loop completes
   write_csv(sports_centre_travel_time, str_glue("data-raw/healthy-places/sports_centre_travel_time-{i-6}.csv"))
-  
+
   print(str_glue("Finished Local Authority {i - 6} of {nrow(wales_lad) - 6}"))
 }
 
 # Save the complete dataset for travel time from MSOAs to sports centres
 # This won't be available in the R package itself but want to keep it in the GitHub repo
 # since it takes quite a while to calculate
-write_csv(sports_centre_travel_time, "data-raw/healthy-places/sports_centre_travel_time.csv")
+write_csv(sports_centre_travel_time, "data-raw/healthy-places/raw-data/sports_centre_travel_time.csv")
 
-sports_centre_travel_time <- read_csv("data-raw/healthy-places/sports_centre_travel_time.csv")
+sports_centre_travel_time <- read_csv("data-raw/healthy-places/raw-data/sports_centre_travel_time.csv")
 
+# ---- Calculate travel time at MSOA level ----
+msoa_wales <- lookup_postcode_oa_lsoa_msoa_ltla_2025 |>
+  filter(str_starts(msoa21_code, "W")) |>
+  distinct(msoa21_code)
+
+places_sports_centre_travel_time_msoa <- sports_centre_travel_time |>
+  group_by(msoa21_code) |>
+  summarise(
+    sports_centre_mean_travel_time = mean(travel_time_mins, na.rm = TRUE)
+  ) |>
+  ungroup() |>
+  right_join(msoa_wales, by = "msoa21_code") |> # Include all Welsh MSOAs
+  mutate(
+    sports_centre_mean_travel_time = replace_na(sports_centre_mean_travel_time, 999), # 999 means unreachable
+    is_within_3_hours = sports_centre_mean_travel_time != 999,
+    year = year(now()),
+    domain = "places",
+    subdomain = "access to services",
+    is_higher_better = FALSE
+  )
+
+# ---- Calculate travel time at LA level ----
 # Look up Local Authorities for each MSOA and sports centre
 sports_centre_travel_time <-
   sports_centre_travel_time |>
@@ -209,7 +234,7 @@ sports_centre_travel_time <-
 # What are the mean travel times within each MSOA (within each Local Authority)?
 sports_centre_travel_time_mean <-
   sports_centre_travel_time |>
-  select(-osm_id) |>  # We don't need to know the GP ID for this
+  select(-osm_id) |> # We don't need to know the GP ID for this
   group_by(msoa21_code, ltla22_code) |>
   summarise(
     mean_travel_time_mins = mean(travel_time_mins, na.rm = TRUE)
@@ -224,14 +249,16 @@ places_sports_centre_travel_time <-
   summarise(mean_travel_time = mean(mean_travel_time_mins, na.rm = TRUE)) |>
   ungroup() |>
   mutate(year = year(now())) |>
-  rename(ltla24_code = ltla22_code,
-         sports_centre_mean_travel_time = mean_travel_time)
+  rename(
+    ltla24_code = ltla22_code,
+    sports_centre_mean_travel_time = mean_travel_time
+  )
 
 places_sports_centre_travel_time <- places_sports_centre_travel_time |>
   mutate(domain = "places") |>
   mutate(subdomain = "access to services") |>
   mutate(is_higher_better = FALSE)
 
-
 # ---- Save output to data/ folder ----
 usethis::use_data(places_sports_centre_travel_time, overwrite = TRUE)
+usethis::use_data(places_sports_centre_travel_time_msoa, overwrite = TRUE)
